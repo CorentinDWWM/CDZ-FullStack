@@ -44,7 +44,7 @@ export default function HeaderMobile({ setShowMenu }) {
         {user ? (
           <>
             {user.email === "cdz.uhc@gmail.com" ? (
-              <NavLink to="/admin-dashboard/*" className={`${styles.btnNav}`}>
+              <NavLink to="/admin-dashboard" className={`${styles.btnNav}`}>
                 Admin
               </NavLink>
             ) : (
