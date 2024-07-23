@@ -1,0 +1,64 @@
+@use "./mixin" as mixin;
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-family-2);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.text_intro {
+  text-align: center;
+  @include mixin.sm {
+    width: 80%;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.text-error {
+  color: white;
+  font-size: 20px;
+  margin-top: 0;
+  text-decoration: underline;
+}

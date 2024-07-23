@@ -1,0 +1,46 @@
+@use "../../../assets/styles/mixin" as mixin;
+
+.separation {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 35%;
+}
+
+.article {
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+
+  @include mixin.xs {
+    height: 300px;
+    padding-bottom: 50px;
+    width: 300px;
+  }
+
+  p {
+    @include mixin.xs {
+      font-size: 18px;
+      width: 70%;
+    }
+  }
+
+  button {
+    width: 60%;
+    font-size: 20px;
+
+    @include mixin.sm {
+      width: 80% !important;
+    }
+  }
+}

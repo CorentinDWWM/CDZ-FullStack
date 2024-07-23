@@ -1,0 +1,27 @@
+@use "../../../assets/styles/mixin" as mixin;
+
+.container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 400px;
+  background-color: var(--primary);
+
+  @include mixin.sm {
+    width: 100%;
+  }
+
+  .btnNav {
+    background-color: var(--pink-1);
+    color: black;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  i {
+    font-size: 60px;
+    cursor: pointer;
+  }
+}

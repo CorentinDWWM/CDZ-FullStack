@@ -1,0 +1,48 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.separation {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  width: 35%;
+}
+
+.sous_titre {
+  width: 23%;
+  text-align: center;
+
+  @include mixin.lg-lt {
+    width: 35%;
+  }
+
+  @include mixin.sm {
+    width: 70%;
+  }
+}
+
+.videos {
+  width: 500px;
+  height: 300px;
+  max-width: none;
+
+  @include mixin.sm-lgt {
+    width: 350px;
+    height: 200px;
+  }
+
+  @include mixin.xxs {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+.separation_video {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 80%;
+}

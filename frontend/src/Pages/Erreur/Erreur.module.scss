@@ -1,0 +1,30 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.divErreur {
+  width: 80%;
+  margin-top: 50px;
+  img {
+    width: 60%;
+  }
+
+  h1 {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+    margin-top: 20px;
+
+    @include mixin.lg {
+      width: 70%;
+    }
+  }
+
+  .trait {
+    border: none;
+    border-top: 2px solid #000;
+    height: 5px;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,84 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.page {
+  @include mixin.lg {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    width: 80%;
+  }
+
+  //   @include mixin.sm {
+  //     width: 90%;
+  //   }
+}
+
+.separation {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.trait_1 {
+  width: 60%;
+  @include mixin.sm {
+    width: 95%;
+  }
+}
+
+.trait_2 {
+  width: 50%;
+  @include mixin.sm {
+    width: 95%;
+  }
+}
+
+.titre_achat {
+  font-family: "Playfair";
+  margin-bottom: 60px;
+  @include mixin.sm {
+    font-size: 28px;
+  }
+}
+
+.account_box {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 50px;
+  height: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  //   width: 70%;
+  @include mixin.sm-lt {
+    width: 80%;
+    // justify-content: center;
+    box-sizing: content-box;
+  }
+  @include mixin.sm {
+    padding: 10px 30px;
+  }
+}
+
+.categories {
+  font-size: 28px;
+  @include mixin.sm-lt {
+    font-size: 20px;
+    margin: 20px;
+  }
+  @include mixin.sm {
+    margin: 10px;
+  }
+}
+
+.trait {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 60px;
+  width: 2px;
+  background-color: black;
+  @include mixin.sm-lt {
+    display: none;
+  }
+}

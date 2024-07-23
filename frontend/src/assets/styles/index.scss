@@ -1,0 +1,18 @@
+@use "./variables";
+@use "./base";
+@use "./flex";
+@use "./utils";
+@use "./debug";
+@use "./themes";
+
+@font-face {
+  font-family: "Playfair";
+  src: local("PlayfairDisplay-Regular"),
+    url("../../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Fertigo";
+  src: local("FertigoProScript-Regular"),
+    url("../../fonts/FertigoProScript-Regular.ttf") format("truetype");
+}

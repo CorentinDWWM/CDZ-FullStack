@@ -1,0 +1,44 @@
+@use "./mixin" as mixin;
+
+button {
+  font-family: var(--font-family);
+}
+
+.btn {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.2s opacity;
+  width: 300px;
+  font-size: 26px;
+  @include mixin.sm {
+    width: 40%;
+    font-size: 18px;
+  }
+}
+
+.btn-primary {
+  background-color: var(--pink-1);
+  color: black;
+  border: none;
+
+  &:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+.btn-secondary {
+  background-color: var(--pink-1);
+  color: black;
+  border: none;
+  &:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--pink-1);
+    color: white;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  background-color: white;
+}

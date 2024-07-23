@@ -1,0 +1,108 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.separation {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 40%;
+}
+
+.box {
+  background-color: var(--primary);
+  color: white;
+  width: 30%;
+  height: 450px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @include mixin.lg {
+    width: 45%;
+    // height: 450px;
+  }
+
+  @include mixin.sm-lgt {
+    height: 500px;
+  }
+
+  @include mixin.sm {
+    width: 80%;
+    height: 450px;
+  }
+
+  .contact_text {
+    width: 90%;
+    font-size: 24px;
+    text-align: center;
+    margin: 50px 0px;
+
+    @include mixin.lg {
+      width: 70%;
+    }
+
+    @include mixin.md {
+      font-size: 20px;
+    }
+
+    @include mixin.sm {
+      width: 80%;
+    }
+  }
+
+  .btnNav {
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    background-color: var(--pink-1);
+    width: 42%;
+    height: 55px;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--primary);
+      border: 1px solid var(--pink-1);
+      color: white;
+      .icon {
+        color: white;
+      }
+    }
+
+    @include mixin.lg-lt {
+      width: 55%;
+    }
+
+    @include mixin.md {
+      width: 45%;
+      height: 60px;
+    }
+
+    .rs_name {
+      font-size: 24px;
+      margin: 0;
+
+      @include mixin.md {
+        font-size: 20px;
+      }
+
+      @include mixin.sm-lgt {
+        display: none;
+      }
+    }
+
+    .icon {
+      font-size: 36px;
+      color: var(--primary);
+
+      @include mixin.md {
+        margin-top: 5px;
+        font-size: 20px;
+      }
+
+      @include mixin.sm-lg {
+        margin: 0;
+        font-size: 24px;
+      }
+    }
+  }
+}

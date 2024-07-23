@@ -1,0 +1,98 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.header {
+  width: 100%;
+  background-color: var(--primary);
+  padding: 20px;
+  height: 100px;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .logo {
+    background: center / contain no-repeat url(../../assets/img/LogoCDZ.png);
+    width: 500px;
+    height: 70px;
+    margin-left: 20px;
+    @include mixin.lg-lt {
+      width: 450px;
+    }
+
+    @include mixin.sm {
+      background: center / contain no-repeat
+        url(../../assets/img/iconeTemple.png);
+      width: 150px;
+      height: 70px;
+    }
+  }
+
+  .navBar {
+    margin-right: 30px;
+    color: white;
+    font-size: 24px;
+    @include mixin.lg-lt {
+      margin-right: 0;
+    }
+  }
+
+  .docs {
+    background-color: var(--pink-1);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    width: 100px;
+    &:hover {
+      height: 47px;
+      width: 99px;
+      border: 1px solid var(--pink-1);
+      background-color: var(--primary);
+      color: white;
+    }
+  }
+
+  .trait {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 80px;
+    width: 2px;
+    background-color: black;
+    @include mixin.lg-lt {
+      display: none;
+    }
+  }
+
+  nav {
+    @include mixin.lg {
+      display: none;
+    }
+
+    p {
+      @include mixin.lg-lt {
+        margin-right: 40px;
+      }
+    }
+  }
+  .mobileHeader {
+    font-size: 4rem;
+    display: none;
+    cursor: pointer;
+    color: white;
+
+    @include mixin.lg {
+      display: block;
+      margin-right: 30px;
+    }
+  }
+}
+
+.btnNav {
+  cursor: pointer;
+
+  @include mixin.lg-lt {
+    margin-right: 40px;
+  }
+}

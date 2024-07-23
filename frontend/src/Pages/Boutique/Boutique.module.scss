@@ -1,0 +1,77 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.separation {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 35%;
+}
+
+.products {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+  .article {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+
+    @include mixin.md {
+      margin-bottom: 50px;
+    }
+
+    @include mixin.sm {
+      height: 300px;
+      padding-bottom: 50px;
+      width: 300px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 200px;
+
+      p {
+        font-size: 32px;
+        margin-bottom: 50px;
+
+        @include mixin.sm {
+          font-size: 24px;
+        }
+      }
+
+      .btnAchat {
+        width: 200px;
+
+        &:hover {
+          height: 52px;
+          width: 199px;
+
+          @include mixin.sm {
+            height: 40px;
+          }
+        }
+      }
+    }
+
+    .logo {
+      background: center / contain no-repeat url(../../assets/img/LogoCDZ.png);
+      width: 90%;
+      height: 70px;
+      margin-top: 50px;
+    }
+  }
+}
