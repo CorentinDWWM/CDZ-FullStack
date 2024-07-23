@@ -12,7 +12,7 @@ export default function Header() {
       <NavLink to="/" className={`${styles.logo}`}></NavLink>
       <nav className={`d-flex jc-around align-items-center ${styles.navBar}`}>
         <NavLink
-          href="https://chevaliers-du-zodiaque-uhc.gitbook.io/chevaliers-du-zodiaque-uhc"
+          to="https://chevaliers-du-zodiaque-uhc.gitbook.io/chevaliers-du-zodiaque-uhc"
           target="_blank"
           className={`link ${styles.docs}`}
         >

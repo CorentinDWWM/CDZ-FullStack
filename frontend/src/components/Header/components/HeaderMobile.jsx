@@ -12,14 +12,14 @@ export default function HeaderMobile({ setShowMenu }) {
           onClick={() => setShowMenu(false)}
           className=" d-flex flex-column align-items-end fa-solid fa-xmark"
         ></i>
-        <a
+        <NavLink
           onClick={() => setShowMenu(false)}
-          href="https://chevaliers-du-zodiaque-uhc.gitbook.io/chevaliers-du-zodiaque-uhc"
+          to="https://chevaliers-du-zodiaque-uhc.gitbook.io/chevaliers-du-zodiaque-uhc"
           target="_blank"
           className={`${styles.btnNav}`}
         >
           Docs
-        </a>
+        </NavLink>
         <NavLink
           onClick={() => setShowMenu(false)}
           to="/videos"
