@@ -3,6 +3,24 @@ import athena from "../../assets/img/Athena.gif";
 import { NavLink } from "react-router-dom";
 
 export default function Accueil() {
+  const [videos, setVideos] = useState([]);
+
+  // pour récupérer les vidéos
+  useEffect(() => {
+    async function getAllVideos() {
+      try {
+        const response = await fetch(`${url}/videos`);
+        if (response.ok) {
+          const videosFromApi = await response.json();
+          setVideos(videosFromApi);
+        }
+      } catch (error) {
+        console.error("Vidéo introuvable", error);
+      }
+    }
+    getAllVideos();
+  }, []);
+
   return (
     <>
       <section
@@ -59,6 +77,22 @@ export default function Accueil() {
           Quand tu sortiras une vidéo sur ce mode de jeu, <br />
           <strong> ta vidéo</strong> se retrouvera <strong> ci-dessous</strong>.
         </p>
+        <div className="d-flex flex-column mt-50">
+          {videos.map((video) => (
+            <>
+              <iframe
+                className={`${styles.videos}`}
+                src={`https://www.youtube.com/embed/${video.id_video}?autoplay=1`}
+                frameBorder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title={video.nom}
+                key={video.id}
+              ></iframe>
+              <hr className={`${styles.separation_video}`} />
+            </>
+          ))}
+        </div>
       </section>
     </>
   );
