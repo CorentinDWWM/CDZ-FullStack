@@ -9,7 +9,7 @@ export default function Boutique() {
   useEffect(() => {
     async function getAllProduit() {
       try {
-        const response = await fetch(`${url}api/produits`);
+        const response = await fetch(`${url}/produits`);
         if (response.ok) {
           const productsFromApi = await response.json();
           setProducts(productsFromApi);

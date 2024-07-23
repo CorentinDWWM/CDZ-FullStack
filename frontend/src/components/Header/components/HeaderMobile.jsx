@@ -49,7 +49,7 @@ export default function HeaderMobile({ setShowMenu }) {
               </NavLink>
             ) : (
               <NavLink
-                to={`/account/${user._id}`}
+                to={`/account/${user.id}`}
                 className={`${styles.btnNav} ${styles.btnNavAccount}`}
               >
                 Mon Compte

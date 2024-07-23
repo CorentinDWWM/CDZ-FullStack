@@ -14,7 +14,7 @@ const ProductPage = () => {
   useEffect(() => {
     async function getProduit() {
       try {
-        const response = await fetch(`${url}api/produits/${id}`);
+        const response = await fetch(`${url}/produits/${id}`);
         if (response.ok) {
           const productFromApi = await response.json();
           setProduct(productFromApi);
@@ -35,7 +35,7 @@ const ProductPage = () => {
       "pk_test_51PV8fgDQ9zSY6LNNpi0k8aCiGBkh7qfVmSah0wzDGD4rac52KL4YLmmi4UhH0oteMmxEilOOcAutDhm2WZE30tOv00FA1TFqwQ"
     );
     const response = await fetch(
-      `${url}api/produits/${product.id}/createcheckout`,
+      `${url}/produits/${product.id}/createcheckout`,
       {
         method: "POST",
         headers: {
