@@ -72,7 +72,7 @@ export default function Menu() {
                 </NavLink>
               ) : (
                 <NavLink
-                  to={`/account/${user._id}`}
+                  to={`/account/${user.id}`}
                   className={`${styles.btnNavConnected}`}
                 >
                   Mon Compte
