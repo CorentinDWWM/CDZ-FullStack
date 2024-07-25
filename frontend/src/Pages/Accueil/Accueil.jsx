@@ -1,6 +1,7 @@
 import styles from "./Accueil.module.scss";
 import athena from "../../assets/img/Athena.gif";
 import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 export default function Accueil() {
   const [videos, setVideos] = useState([]);
