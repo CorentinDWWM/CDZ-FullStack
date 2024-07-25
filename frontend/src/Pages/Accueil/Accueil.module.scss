@@ -3,46 +3,62 @@
 .first_part {
   margin: 0;
   padding: 0;
-}
 
-.intro {
-  padding: 40px;
-  justify-content: space-between;
-  max-height: 500px;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  @include mixin.lg-lt {
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    max-height: none;
-    margin-top: 30px;
-  }
-}
+  .intro {
+    padding: 40px;
+    justify-content: space-between;
+    max-height: 500px;
+    margin-top: 60px;
+    margin-bottom: 30px;
 
-.text_left {
-  width: 50%;
+    @include mixin.lg-lt {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      max-height: none;
+      margin-top: 30px;
+    }
 
-  @include mixin.lg-lt {
-    width: 70%;
-    margin-left: 0;
-  }
-  @include mixin.sm {
-    width: 100%;
-  }
-}
+    .text_left {
+      width: 50%;
 
-.text_bloc {
-  height: 100%;
-}
+      @include mixin.lg-lt {
+        width: 70%;
+        margin-left: 0;
+      }
 
-.start {
-  margin: 0;
-  h1 {
-    font-size: 46px;
-    margin-top: 20px;
-    @include mixin.sm {
-      width: 90%;
+      @include mixin.sm {
+        width: 100%;
+      }
+
+      .text_bloc {
+        height: 100%;
+      }
+
+      .start {
+        margin: 0;
+
+        h1 {
+          font-size: 46px;
+          margin-top: 20px;
+
+          @include mixin.sm {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    .gif {
+      width: 45%;
+
+      @include mixin.lg-lt {
+        width: 70%;
+      }
+
+      @include mixin.sm {
+        width: 100%;
+      }
     }
   }
 }
@@ -55,21 +71,11 @@ span {
   color: #cd3a84;
 }
 
-.gif {
-  width: 45%;
-  @include mixin.lg-lt {
-    width: 70%;
-  }
-  @include mixin.sm {
-    width: 100%;
-  }
-}
-
 .trait {
   border: none;
   border-top: 2px solid #000;
   height: 5px;
-  width: 95%;
+  width: 85%;
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -80,4 +86,29 @@ span {
 
 h2 {
   font-size: 36px;
+}
+
+.separation_video {
+  border: none;
+  border-top: 2px solid #000;
+  height: 5px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 80%;
+}
+
+.videos {
+  width: 500px;
+  height: 300px;
+  max-width: none;
+
+  @include mixin.sm-lgt {
+    width: 350px;
+    height: 200px;
+  }
+
+  @include mixin.xxs {
+    width: 250px;
+    height: 150px;
+  }
 }

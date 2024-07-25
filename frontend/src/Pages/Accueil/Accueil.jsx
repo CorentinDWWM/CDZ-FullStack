@@ -2,6 +2,7 @@ import styles from "./Accueil.module.scss";
 import athena from "../../assets/img/Athena.gif";
 import { NavLink } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import { url } from "../../url";
 
 export default function Accueil() {
   const [videos, setVideos] = useState([]);
@@ -20,6 +21,7 @@ export default function Accueil() {
       }
     }
     getAllVideos();
+    console.log(videos);
   }, []);
 
   return (
@@ -70,9 +72,7 @@ export default function Accueil() {
         </NavLink>
       </section>
       <hr className={`${styles.trait}`} />
-      <section
-        className={`d-flex flex-column align-items-center ${styles.videos}`}
-      >
+      <section className={`d-flex flex-column align-items-center`}>
         <h2>Vidéos</h2>
         <p className="text_intro">
           Quand tu sortiras une vidéo sur ce mode de jeu, <br />

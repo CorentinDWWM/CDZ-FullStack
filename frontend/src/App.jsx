@@ -3,6 +3,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import UserProvider from "./components/Providers/UserProvider";
+import CookieBanner from "./components/Modal/Cookies/Cookies";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Outlet />
           </div>
           <Footer />
+          <CookieBanner />
         </UserProvider>
       </div>
       <ScrollRestoration />
