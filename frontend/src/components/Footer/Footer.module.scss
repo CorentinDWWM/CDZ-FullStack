@@ -1,57 +1,10 @@
 @use "../../assets/styles/mixin" as mixin;
 
 .footer {
-  margin-top: 70px;
-  width: 100%;
   background-color: var(--primary);
-  padding: 20px;
-  justify-content: space-evenly;
-  @include mixin.md {
-    flex-direction: column;
-  }
+  justify-content: space-between;
+  padding: 20px 200px;
 
-  .btnNav {
-    padding: 10px;
-    border: none;
-    margin: 10px;
-    background-color: var(--pink-1);
-    width: 15%;
-    font-size: 24px;
-    height: 50px;
-    cursor: pointer;
-    color: black;
-    &:hover {
-      background-color: var(--primary);
-      border: 1px solid var(--pink-1);
-      color: white;
-      .icon {
-        color: white;
-      }
-    }
-    @include mixin.md {
-      width: 30%;
-    }
-    @include mixin.sm {
-      width: 40%;
-    }
-    p {
-      margin: 0;
-      width: 100px;
-      text-align: center;
-      @include mixin.md {
-        font-size: 16px;
-      }
-    }
-
-    .icon {
-      font-size: 38px;
-      color: var(--primary);
-      @include mixin.lg {
-        font-size: 24px;
-      }
-      @include mixin.md {
-        font-size: 20px;
-      }
-    }
+  .discord {
   }
 }

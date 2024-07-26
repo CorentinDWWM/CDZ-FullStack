@@ -21,7 +21,6 @@ export default function Accueil() {
       }
     }
     getAllVideos();
-    console.log(videos);
   }, []);
 
   return (

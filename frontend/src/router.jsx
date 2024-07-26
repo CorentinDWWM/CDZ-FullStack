@@ -26,6 +26,7 @@ import ProductsList from "./Pages/Account/Admin/components/Products/ProductsList
 import ProductsEdit from "./Pages/Account/Admin/components/Products/ProductsEdit";
 import VideosList from "./Pages/Account/Admin/components/Videos/VideosList";
 import VideosEdit from "./Pages/Account/Admin/components/Videos/VideosEdit";
+import Mentions_Legales from "./Pages/Form/RGPD/Mentions_Legales/Mentions_Legales";
 
 const MainRoutes = {
   path: "/",
@@ -71,6 +72,10 @@ const MainRoutes = {
     {
       path: "/rgpd",
       element: <RGPD />,
+    },
+    {
+      path: "/mentions_legales",
+      element: <Mentions_Legales />,
     },
     {
       path: "/login",
