@@ -27,11 +27,13 @@ import ProductsEdit from "./Pages/Account/Admin/components/Products/ProductsEdit
 import VideosList from "./Pages/Account/Admin/components/Videos/VideosList";
 import VideosEdit from "./Pages/Account/Admin/components/Videos/VideosEdit";
 import Mentions_Legales from "./Pages/Form/RGPD/Mentions_Legales/Mentions_Legales";
+import { produitLoader } from "./loader/produitLoader";
 
 const MainRoutes = {
   path: "/",
   element: <App />,
   loader: userLoader,
+  produitLoader,
   children: [
     {
       path: "/",
