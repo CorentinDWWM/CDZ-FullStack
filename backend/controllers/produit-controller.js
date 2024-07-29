@@ -22,7 +22,7 @@ const goCreateCheckout = async (req, res) => {
     payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
-    success_url: { deploy },
+    success_url: `${deploy}`,
     cancel_url: `${deploy}/boutique`,
   });
   res.json({ id: session.id });
