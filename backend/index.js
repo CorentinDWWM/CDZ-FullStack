@@ -9,7 +9,7 @@ const produitRoutes = require("./routes/produits");
 const videoRoutes = require("./routes/videos");
 // const cors = require("cors");
 // const allowedOrigin = "*";
-const allowedOrigin = "*";
+const allowedOrigin = "https://cdz-fullstack.onrender.com";
 const path = require("path");
 const __DIRNAME = path.resolve();
 
