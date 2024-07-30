@@ -35,7 +35,7 @@ export default function Header() {
       </nav>
       <i
         onClick={() => setShowMenu(true)}
-        className={`fas fa-bars mr-10 ${styles.mobileHeader}`}
+        className={`fas fa-bars ${styles.mobileHeader}`}
       ></i>
       {showMenu && (
         <>
