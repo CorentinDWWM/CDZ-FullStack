@@ -16,11 +16,11 @@
     width: 500px;
     height: 70px;
     margin-left: 20px;
-    @include mixin.lg-lt {
-      width: 450px;
-    }
+    // @include mixin.xl-lt {
+    //   width: 450px;
+    // }
 
-    @include mixin.sm {
+    @include mixin.sm-lgt {
       background: center / contain no-repeat
         url(../../assets/img/iconeTemple.png);
       width: 150px;
@@ -32,8 +32,10 @@
     margin-right: 30px;
     color: white;
     font-size: 24px;
+    gap: 50px;
+
     @include mixin.lg-lt {
-      margin-right: 0;
+      gap: 20px;
     }
   }
 
@@ -55,12 +57,10 @@
   }
 
   .trait {
-    margin-left: 50px;
-    margin-right: 50px;
     height: 80px;
     width: 2px;
     background-color: black;
-    @include mixin.lg-lt {
+    @include mixin.xl-lt {
       display: none;
     }
   }
@@ -71,7 +71,7 @@
     }
 
     p {
-      @include mixin.lg-lt {
+      @include mixin.xl-lt {
         margin-right: 40px;
       }
     }
@@ -91,8 +91,4 @@
 
 .btnNav {
   cursor: pointer;
-
-  @include mixin.lg-lt {
-    margin-right: 40px;
-  }
 }

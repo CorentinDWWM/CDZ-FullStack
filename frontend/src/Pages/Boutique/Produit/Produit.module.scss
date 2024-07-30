@@ -5,7 +5,7 @@
   border-top: 2px solid #000;
   height: 5px;
   margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   width: 35%;
 }
 
@@ -14,33 +14,68 @@
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
   width: 400px;
   height: 400px;
   padding: 20px;
   text-align: center;
-  margin-top: 100px;
 
   @include mixin.xs {
     height: 300px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     width: 300px;
+    gap: 20px;
   }
 
-  p {
-    @include mixin.xs {
-      font-size: 18px;
-      width: 70%;
+  .logo {
+    background: center / contain no-repeat url(../../../assets/img/LogoCDZ.png);
+    width: 90%;
+    height: 70px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 40px;
+
+    p {
+      font-size: 20px;
+      margin-bottom: 50px;
+      margin: 0;
+
+      @include mixin.sm {
+        font-size: 18px;
+      }
+
+      @include mixin.xs {
+        font-size: 16px;
+      }
     }
-  }
 
-  button {
-    width: 60%;
-    font-size: 20px;
+    .btnAchat {
+      width: 300px;
 
-    @include mixin.sm {
-      width: 80% !important;
+      @include mixin.xs {
+        width: 200px;
+      }
+
+      &:hover {
+        height: 51px;
+        width: 299px;
+
+        @include mixin.sm {
+          height: 40px;
+        }
+
+        @include mixin.xs {
+          width: 199px;
+        }
+      }
     }
   }
 }

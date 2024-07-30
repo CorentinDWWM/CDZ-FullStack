@@ -45,9 +45,5 @@
 
   .btnNav {
     cursor: pointer;
-
-    @include mixin.lg-lt {
-      margin-right: 40px;
-    }
   }
 }

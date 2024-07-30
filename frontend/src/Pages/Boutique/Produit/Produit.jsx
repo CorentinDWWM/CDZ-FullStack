@@ -55,17 +55,25 @@ const ProductPage = () => {
       <h1>Achat</h1>
       <hr className={`${styles.separation}`} />
       <div className={`${styles.article}`}>
-        <img src={logo} alt="cdz uhc" />
-        <p>{product.description}</p>
-        {user ? (
-          <button onClick={makePayment} className="btn btn-secondary">
-            Confirmer l'achat
-          </button>
-        ) : (
-          <NavLink to="/login" className="btn btn-secondary">
-            Confirmer l'achat
-          </NavLink>
-        )}
+        <div className={`${styles.logo}`}></div>
+        <div className={`${styles.content}`}>
+          <p>{product.description}</p>
+          {user ? (
+            <button
+              onClick={makePayment}
+              className={`btn btn-secondary ta-center ${styles.btnAchat}`}
+            >
+              Confirmer l'achat
+            </button>
+          ) : (
+            <NavLink
+              to="/login"
+              className={`btn btn-secondary ta-center ${styles.btnAchat}`}
+            >
+              Confirmer l'achat
+            </NavLink>
+          )}
+        </div>
       </div>
     </>
   );

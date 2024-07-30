@@ -52,14 +52,20 @@
   }
 }
 
-@mixin lg-lt {
-  @media (max-width: 1340px) {
+@mixin xl {
+  @media (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin xl {
-  @media (max-width: 1200px) {
+@mixin lg-lt {
+  @media (max-width: 1350px) {
+    @content;
+  }
+}
+
+@mixin xl-lt {
+  @media (max-width: 1500px) {
     @content;
   }
 }
