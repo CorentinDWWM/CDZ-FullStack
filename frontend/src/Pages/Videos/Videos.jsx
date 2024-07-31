@@ -34,7 +34,7 @@ export default function Videos() {
           <>
             <iframe
               className={`${styles.videos}`}
-              src={`https://www.youtube.com/embed/${video.id_video}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${video.id_video}?autoplay=0`}
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
