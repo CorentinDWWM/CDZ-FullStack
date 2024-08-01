@@ -46,7 +46,6 @@ export default function Login() {
 
   //   fonction de validation de formulaire
   async function submit(values) {
-    console.log(values);
     try {
       const response = await signin(values);
       if (!response.message) {

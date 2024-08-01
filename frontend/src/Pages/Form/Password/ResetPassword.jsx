@@ -40,13 +40,11 @@ export default function ResetPassword() {
   });
 
   async function submit(values) {
-    console.log(values);
     try {
       const response = await resetPassword({
         password: values.password,
         email,
       });
-      console.log(response);
       navigate("/login");
     } catch (error) {
       console.error(error);

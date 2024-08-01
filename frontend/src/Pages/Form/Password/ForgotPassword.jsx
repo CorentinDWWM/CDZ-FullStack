@@ -35,10 +35,8 @@ export default function ForgotPassword() {
   });
 
   async function submit(values) {
-    console.log(values);
     try {
       const response = await forgotPassword(values.email);
-      console.log(response);
     } catch (error) {
       console.error(error);
     }

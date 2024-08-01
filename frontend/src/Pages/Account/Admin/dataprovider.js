@@ -1,8 +1,9 @@
 import { fetchUtils } from "react-admin";
 import stringify from "query-string";
+import { url } from "../../../url";
 
-// const apiUrl = "http://localhost:5000/api";
-const apiUrl = "https://cdz-fullstack.onrender.com/api";
+const apiUrl = { url };
+// const apiUrl = "https://cdz-fullstack.onrender.com/api";
 const httpClient = fetchUtils.fetchJson;
 
 export default {
