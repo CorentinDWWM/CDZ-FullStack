@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const Produit = require("../models/produit.schema");
 const {
   getAllProduits,
   getProduit,

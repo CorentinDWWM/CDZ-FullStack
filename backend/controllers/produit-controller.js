@@ -1,7 +1,7 @@
 const Produit = require("../models/produit.schema");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const local = "http:localhost:5173";
+const local = "http://localhost:5173";
 const deploy = "https://cdz-fullstack.onrender.com";
 
 const goCreateCheckout = async (req, res) => {
@@ -22,8 +22,8 @@ const goCreateCheckout = async (req, res) => {
     payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
-    success_url: `${deploy}`,
-    cancel_url: `${deploy}/boutique`,
+    success_url: `${local}`,
+    cancel_url: `${local}/boutique`,
   });
   res.json({ id: session.id });
 };

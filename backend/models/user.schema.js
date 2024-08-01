@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { achatSchema } = require("./achat.schema");
 
 const userSchema = new mongoose.Schema(
   {
@@ -6,6 +7,7 @@ const userSchema = new mongoose.Schema(
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     token: String,
+    purchases: [achatSchema],
   },
   {
     timestamps: true,

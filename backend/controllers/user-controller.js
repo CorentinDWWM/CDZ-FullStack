@@ -7,6 +7,8 @@ const {
   sendInvalidEmailToken,
   sendForgotPassword,
 } = require("../email/email");
+const stripe = require("stripe")("votre_cle_secrete_stripe");
+const { getStripePurchases } = require("./achat-controller");
 
 const createTokenEmail = (email) => {
   return jwt.sign({ email }, process.env.SECRET, { expiresIn: "300s" });
@@ -176,12 +178,55 @@ const deleteUser = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
-    const user = await User.create();
+    const user = new User(req.body);
+    await user.save();
     res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
+async function storePurchasesInUser(purchases, id) {
+  try {
+    const user = await User.findById(id);
+    if (!user) {
+      throw new Error("Utilisateur non trouvé");
+    }
+
+    for (const purchase of purchases) {
+      const amountInUnits = purchase.amount / 100;
+
+      user.purchases.push({
+        stripeId: purchase.id,
+        amount: amountInUnits,
+        currency: purchase.currency,
+        status: purchase.status,
+        created: new Date(purchase.created * 1000),
+      });
+    }
+
+    await user.save();
+    console.log("Achats stockés avec succès dans le document utilisateur");
+  } catch (error) {
+    console.error(
+      "Erreur lors du stockage des achats dans le document utilisateur:",
+      error
+    );
+    throw error;
+  }
+}
+
+(async (userId) => {
+  try {
+    const purchases = await getStripePurchases();
+    await storePurchasesInUser(purchases, userId);
+  } catch (error) {
+    console.error(
+      "Erreur lors de la récupération ou du stockage des achats:",
+      error
+    );
+  }
+})(User._id);
 
 module.exports = {
   signupUser,

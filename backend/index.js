@@ -7,9 +7,10 @@ const userRoutes = require("./routes/users");
 const roleRoutes = require("./routes/roles");
 const produitRoutes = require("./routes/produits");
 const videoRoutes = require("./routes/videos");
+const achatRoutes = require("./routes/achats");
 // const cors = require("cors");
-// const allowedOrigin = "*";
-const allowedOrigin = "https://cdz-fullstack.onrender.com";
+const allowedOrigin = "*";
+// const allowedOrigin = "https://cdz-fullstack.onrender.com";
 const path = require("path");
 const __DIRNAME = path.resolve();
 
@@ -30,6 +31,7 @@ app.use("/api/users", userRoutes);
 app.use("api/roles", roleRoutes);
 app.use("/api/produits", produitRoutes);
 app.use("/api/videos", videoRoutes);
+app.use("/api/achats", achatRoutes);
 
 app.use(express.static(path.join(__DIRNAME, "frontend/dist")));
 app.get("/", (req, res) => {
