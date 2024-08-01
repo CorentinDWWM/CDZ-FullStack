@@ -186,9 +186,9 @@ const createUser = async (req, res) => {
   }
 };
 
-async function storePurchasesInUser(purchases, id) {
+async function storePurchasesInUser(purchases, userId) {
   try {
-    const user = await User.findById(id);
+    const user = await User.findById(userId);
     if (!user) {
       throw new Error("Utilisateur non trouvé");
     }
