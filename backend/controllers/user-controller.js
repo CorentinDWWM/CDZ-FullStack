@@ -127,12 +127,14 @@ const resetPassword = async (req, res) => {
 };
 
 const getUsers = async (req, res) => {
+  const userId = req.headers["x-user-id"];
   try {
     const users = await User.find();
     res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+  req.userId = userId;
 };
 
 const getOneUser = async (req, res) => {
@@ -187,6 +189,7 @@ const createUser = async (req, res) => {
 };
 
 async function storePurchasesInUser(purchases, userId) {
+  console.log(userId);
   try {
     const user = await User.findById(userId);
     if (!user) {
@@ -216,17 +219,18 @@ async function storePurchasesInUser(purchases, userId) {
   }
 }
 
-(async (userId) => {
-  try {
-    const purchases = await getStripePurchases();
-    await storePurchasesInUser(purchases, userId);
-  } catch (error) {
-    console.error(
-      "Erreur lors de la récupération ou du stockage des achats:",
-      error
-    );
-  }
-})(User._id);
+// (async () => {
+//   try {
+//     const purchases = await getStripePurchases();
+//     await storePurchasesInUser(purchases);
+//     res.send(purchases);
+//   } catch (error) {
+//     console.error(
+//       "Erreur lors de la récupération ou du stockage des achats:",
+//       error
+//     );
+//   }
+// })(User._id);
 
 module.exports = {
   signupUser,

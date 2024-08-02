@@ -8,7 +8,7 @@ const roleRoutes = require("./routes/roles");
 const produitRoutes = require("./routes/produits");
 const videoRoutes = require("./routes/videos");
 const achatRoutes = require("./routes/achats");
-// const cors = require("cors");
+const cors = require("cors");
 const allowedOrigin = "*";
 // const allowedOrigin = "https://cdz-fullstack.onrender.com";
 const path = require("path");
@@ -22,11 +22,11 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   next();
 });
-// app.use(
-//   cors({
-//     origin: "*",
-//   })
-// );
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use("/api/users", userRoutes);
 app.use("api/roles", roleRoutes);
 app.use("/api/produits", produitRoutes);
