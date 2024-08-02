@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { useLoaderData } from "react-router-dom";
+import { url } from "../../url";
 
 export default function UserProvider({ children }) {
   const userConnected = useLoaderData();
   const [user, setUser] = useState(userConnected);
+  const [purchases, setPurchases] = useState([]);
 
   useEffect(() => {
     const userStorage = JSON.parse(localStorage.getItem("user"));
@@ -15,6 +17,21 @@ export default function UserProvider({ children }) {
       } else {
         logoutConnetedUser();
       }
+    }
+
+    if (user) {
+      async function sendUserId() {
+        try {
+          const response = await fetch(`${url}/users`, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "x-user-id": user.id,
+            },
+          });
+        } catch (error) {}
+      }
+      sendUserId();
     }
   }, []);
 
