@@ -104,7 +104,7 @@ const MainRoutes = {
       ),
     },
     {
-      path: "/account/:_id",
+      path: "/account/:id",
       element: (
         <UserConnected>
           <MyAccount />

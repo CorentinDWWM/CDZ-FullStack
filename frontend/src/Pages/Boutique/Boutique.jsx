@@ -27,7 +27,7 @@ export default function Boutique() {
       <hr className={`${styles.separation}`} />
       <ul className={`${styles.products}`}>
         {products.map((product) => (
-          <li key={product._id} className={`${styles.article}`}>
+          <li key={product.id} className={`${styles.article}`}>
             <div className={`${styles.logo}`}></div>
             <div className={`${styles.content}`}>
               <p>{product.name}</p>

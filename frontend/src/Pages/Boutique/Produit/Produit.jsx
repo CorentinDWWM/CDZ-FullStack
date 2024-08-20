@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import logo from "../../../assets/img/LogoCDZ.png";
 import styles from "./Produit.module.scss";
 import { loadStripe } from "@stripe/stripe-js";
 import { UserContext } from "../../../context/UserContext";
@@ -41,7 +40,10 @@ const ProductPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(product),
+        body: JSON.stringify({
+          product: product,
+          user: user,
+        }),
       }
     );
     const session = await response.json();

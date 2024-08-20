@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./MyAccount.module.scss";
+import { url } from "../../url";
+import { useParams } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
 
 export default function MyAccount() {
+  const { id } = useParams();
+  const [achats, setAchats] = useState(null);
+
+  useEffect(() => {
+    async function getAllUsersAchats() {
+      try {
+        const response = await fetch(`${url}/achats/${id}`);
+        if (response.ok) {
+          const achatsFromApi = await response.json();
+          setAchats(achatsFromApi);
+        }
+      } catch (error) {
+        console.error("Produit introuvable", error);
+      }
+    }
+    getAllUsersAchats();
+  }, [id]);
   return (
     <div className={`${styles.page}`}>
       <h1 className="ta-center mt-70">Mon compte</h1>
@@ -16,7 +36,9 @@ export default function MyAccount() {
           <h2 className={`${styles.titre_achat}`}>Historique des achats</h2>
           <div className={`${styles.account_box}`}>
             <div className="d-flex jc-between align-items-center">
-              <p className={`${styles.categories}`}>Achat</p>
+              <div>
+                <p className={`${styles.categories}`}>Achat</p>
+              </div>
               <div className={`${styles.trait}`}></div>
               <p className={`${styles.categories}`}>Quantité</p>
               <div className={`${styles.trait}`}></div>
