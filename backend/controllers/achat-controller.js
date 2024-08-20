@@ -1,16 +1,6 @@
 const { Achat } = require("../models/achat.schema");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-async function getStripePurchases() {
-  try {
-    const purchases = await stripe.charges.list({ limit: 100 });
-    return purchases.data;
-  } catch (error) {
-    console.error("Erreur lors de la récupération des achats Stripe:", error);
-    throw error;
-  }
-}
-
 async function storePurchases(purchases) {
   try {
     for (const purchase of purchases) {
@@ -36,22 +26,23 @@ async function storePurchases(purchases) {
   }
 }
 
-(async () => {
-  try {
-    const purchases = await getStripePurchases();
-    await storePurchases(purchases);
-  } catch (error) {
-    console.error(
-      "Erreur lors de la récupération ou du stockage des achats:",
-      error
-    );
-  }
-})();
+// (async () => {
+//   try {
+//     const purchases = await getStripePurchases();
+//     await storePurchases(purchases);
+//   } catch (error) {
+//     console.error(
+//       "Erreur lors de la récupération ou du stockage des achats:",
+//       error
+//     );
+//   }
+// })();
 
 const getAchats = async (req, res) => {
   try {
-    const achats = await Achat.find();
-    res.status(200).json(achats);
+    const purchases = await stripe.charges.list({ limit: 100 });
+    // const achats = await Achat.find();
+    res.status(200).json(purchases);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -59,7 +50,13 @@ const getAchats = async (req, res) => {
 
 const getOneAchat = async (req, res) => {
   try {
-    const achat = await Achat.findById(req.params.id);
+    // const achat = await Achat.findById(req.params.id);
+    const purchases = await stripe.charges.list({
+      limit: 100,
+      customer_details: {
+        email: "newsonic62@gmail.com",
+      },
+    });
     if (!achat) {
       res.status(500).json({ error: "Achat not found" });
     } else {
@@ -114,5 +111,4 @@ module.exports = {
   updateAchat,
   deleteAchat,
   createAchat,
-  getStripePurchases,
 };

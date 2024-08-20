@@ -1,11 +1,13 @@
 const Produit = require("../models/produit.schema");
+const User = require("../models/user.schema");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const local = "http://localhost:5173";
 const deploy = "https://cdz-fullstack.onrender.com";
 
 const goCreateCheckout = async (req, res) => {
-  const product = await Produit.findById(req.params.id);
+  const { user, product } = req.body;
+
   const lineItems = [
     {
       price_data: {
@@ -24,6 +26,7 @@ const goCreateCheckout = async (req, res) => {
     mode: "payment",
     success_url: `${local}`,
     cancel_url: `${local}/boutique`,
+    customer_email: `${user.email}`,
   });
   res.json({ id: session.id });
 };
