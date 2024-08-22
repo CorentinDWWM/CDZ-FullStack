@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
 const userRoutes = require("./routes/users");
-const roleRoutes = require("./routes/roles");
 const produitRoutes = require("./routes/produits");
 const videoRoutes = require("./routes/videos");
 const achatRoutes = require("./routes/achats");
@@ -28,7 +27,6 @@ app.use(
   })
 );
 app.use("/api/users", userRoutes);
-app.use("api/roles", roleRoutes);
 app.use("/api/produits", produitRoutes);
 app.use("/api/videos", videoRoutes);
 app.use("/api/achats", achatRoutes);
