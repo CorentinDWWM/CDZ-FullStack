@@ -29,7 +29,10 @@ export default function UserProvider({ children }) {
               "x-user-id": user.id,
             },
           });
-        } catch (error) {}
+          setPurchases(response.data);
+        } catch (error) {
+          console.error("Erreur lors de la récupération des achats:", error);
+        }
       }
       sendUserId();
     }
@@ -51,7 +54,7 @@ export default function UserProvider({ children }) {
 
   return (
     <UserContext.Provider
-      value={{ user, setConnectedUser, logoutConnetedUser }}
+      value={{ user, setConnectedUser, logoutConnetedUser, purchases }}
     >
       {children}
     </UserContext.Provider>

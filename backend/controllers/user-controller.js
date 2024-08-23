@@ -188,26 +188,39 @@ const createUser = async (req, res) => {
   }
 };
 
+const getLoggedInUserId = (req, res, next) => {
+  const userId = req.headers["x-user-id"];
+  if (!userId) {
+    return res.status(500).send("ID utilisateur manquant");
+  }
+  req.userId = userId;
+  next();
+};
+
 async function storePurchasesInUser(purchases, userId) {
-  console.log(userId);
+  // console.log(userId);
+
   try {
     const user = await User.findById(userId);
+    console.log(user);
+
     if (!user) {
       throw new Error("Utilisateur non trouvé");
     }
+    const emailStripe = purchases.billing_details.email;
+    if (user.email === emailStripe) {
+      for (const purchase of purchases) {
+        const amountInUnits = purchase.amount / 100;
 
-    for (const purchase of purchases) {
-      const amountInUnits = purchase.amount / 100;
-
-      user.purchases.push({
-        stripeId: purchase.id,
-        amount: amountInUnits,
-        currency: purchase.currency,
-        status: purchase.status,
-        created: new Date(purchase.created * 1000),
-      });
+        user.purchases.push({
+          stripeId: purchase.id,
+          amount: amountInUnits,
+          currency: purchase.currency,
+          status: purchase.status,
+          created: new Date(purchase.created * 1000),
+        });
+      }
     }
-
     await user.save();
     console.log("Achats stockés avec succès dans le document utilisateur");
   } catch (error) {
@@ -219,18 +232,15 @@ async function storePurchasesInUser(purchases, userId) {
   }
 }
 
-// (async () => {
-//   try {
-//     const purchases = await getStripePurchases();
-//     await storePurchasesInUser(purchases);
-//     res.send(purchases);
-//   } catch (error) {
-//     console.error(
-//       "Erreur lors de la récupération ou du stockage des achats:",
-//       error
-//     );
-//   }
-// })(User._id);
+async (req, res) => {
+  try {
+    const purchases = await getStripePurchases();
+    await storePurchasesInUser(purchases, req.userId);
+    res.send(purchases);
+  } catch (error) {
+    console.error("Erreur lors du stockage des achats");
+  }
+};
 
 module.exports = {
   signupUser,
@@ -243,4 +253,5 @@ module.exports = {
   updateUser,
   deleteUser,
   createUser,
+  getLoggedInUserId,
 };

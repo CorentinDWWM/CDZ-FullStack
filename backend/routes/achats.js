@@ -13,7 +13,7 @@ const {
 
 router.get("/", getAchats);
 
-router.get("/:id", getOneAchat);
+router.get("/:email", getOneAchat);
 router.put("/:id", updateAchat);
 router.delete("/:id", deleteAchat);
 router.post("/", createAchat);

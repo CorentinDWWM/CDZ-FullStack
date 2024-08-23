@@ -7,6 +7,9 @@ import { UserContext } from "../../context/UserContext";
 export default function MyAccount() {
   const { id } = useParams();
   const [achats, setAchats] = useState(null);
+  const { purchases } = useContext(UserContext);
+
+  console.log(purchases);
 
   useEffect(() => {
     async function getAllUsersAchats() {
