@@ -41,6 +41,9 @@ export default function Videos() {
               title={video.nom}
               key={video.id}
             ></iframe>
+            <p style={{ textAlign: "center" }}>
+              Vidéo par <strong>{video.createur}</strong>
+            </p>
             <hr className={`${styles.separation_video}`} />
           </>
         ))}

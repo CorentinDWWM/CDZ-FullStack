@@ -2,7 +2,7 @@ import { fetchUtils } from "react-admin";
 import stringify from "query-string";
 import { url } from "../../../url";
 
-const apiUrl = { url };
+const apiUrl = url;
 // const apiUrl = "https://cdz-fullstack.onrender.com/api";
 const httpClient = fetchUtils.fetchJson;
 

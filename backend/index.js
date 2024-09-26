@@ -37,9 +37,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://newsonic62:ouais@firsttest.2ozolmj.mongodb.net/CDZ?retryWrites=true&w=majority&appName=FirstTest"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(port, "0.0.0.0", () => {
       console.log(`Connected to db & listening on port : ${port}`);
