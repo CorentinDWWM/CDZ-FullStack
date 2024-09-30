@@ -45,8 +45,9 @@
       height: 200px;
 
       p {
+        margin: 0;
         font-size: 32px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
 
         @include mixin.sm {
           font-size: 24px;

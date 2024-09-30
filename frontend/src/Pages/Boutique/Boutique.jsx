@@ -31,7 +31,7 @@ export default function Boutique() {
             <div className={`${styles.logo}`}></div>
             <div className={`${styles.content}`}>
               <p>{product.name}</p>
-              <p>{product.price}</p>
+              <p style={{ marginTop: "0" }}>{product.price} €</p>
               <NavLink
                 className={`btn btn-secondary ta-center ${styles.btnAchat}`}
                 to={`/boutique/produit/${product.id}`}
