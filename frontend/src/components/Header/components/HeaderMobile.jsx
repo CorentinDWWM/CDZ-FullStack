@@ -44,24 +44,37 @@ export default function HeaderMobile({ setShowMenu }) {
         {user ? (
           <>
             {user.email === "cdz.uhc@gmail.com" ? (
-              <NavLink to="/admin-dashboard" className={`${styles.btnNav}`}>
+              <NavLink
+                to="/admin-dashboard"
+                onClick={() => setShowMenu(false)}
+                className={`${styles.btnNav}`}
+              >
                 Admin
               </NavLink>
             ) : (
               <NavLink
                 to={`/account/${user.id}`}
+                onClick={() => setShowMenu(false)}
                 className={`${styles.btnNav} ${styles.btnNavAccount}`}
               >
                 Mon Compte
               </NavLink>
             )}
             <div className={`${styles.trait}`}></div>
-            <NavLink to="/logout" className={`${styles.btnNav}`}>
+            <NavLink
+              to="/logout"
+              className={`${styles.btnNav}`}
+              onClick={() => setShowMenu(false)}
+            >
               Déconnexion
             </NavLink>
           </>
         ) : (
-          <NavLink to="/login" className={`${styles.btnNav}`}>
+          <NavLink
+            to="/login"
+            className={`${styles.btnNav}`}
+            onClick={() => setShowMenu(false)}
+          >
             Connexion
           </NavLink>
         )}
