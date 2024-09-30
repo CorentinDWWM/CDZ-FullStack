@@ -11,6 +11,7 @@ export default function Footer() {
       <div className={"d-flex flex-column center"}>
         <Link to="/rgpd">Politique de confidentialité</Link>
         <Link to="/mentions_legales">Mentions Légales</Link>
+        <Link to="/cgv">CGV</Link>
       </div>
       <div className={`d-flex align-items-center ${styles.boxRS}`}>
         <Link
