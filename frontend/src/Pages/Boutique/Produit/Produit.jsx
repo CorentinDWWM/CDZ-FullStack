@@ -60,6 +60,7 @@ const ProductPage = () => {
         <div className={`${styles.logo}`}></div>
         <div className={`${styles.content}`}>
           <p>{product.description}</p>
+          <p>{product.price}</p>
           {user ? (
             <button
               onClick={makePayment}
