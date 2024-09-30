@@ -4,7 +4,7 @@ import styles from "./CGV.module.scss";
 export default function CGV() {
   return (
     <div className={`${styles.cgv}`}>
-      <h1>CGV</h1>
+      <h1>Conditions Générales de Vente</h1>
       <p>
         Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble
         des transactions réalisées sur le site{" "}
