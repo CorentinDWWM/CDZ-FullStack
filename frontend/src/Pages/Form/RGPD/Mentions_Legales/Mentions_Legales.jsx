@@ -13,19 +13,19 @@ export default function Mentions_Legales() {
           <h2>Editeur du site</h2>
           <ul>
             <li>
-              Nom de l'entreprise : <strong>[CDZ Company]</strong>
+              Nom de l'entreprise : <strong>Chevaliers du Zodiaque UHC</strong>
             </li>
             <li>
-              Adresse : <strong>[Chez moi]</strong>
+              Adresse : <strong>A définir</strong>
             </li>
             <li>
-              Téléphone : <strong>[06 00 00 00 00]</strong>
+              Téléphone : <strong>A définir</strong>
             </li>
             <li>
-              Email : <strong>[cdz.uhc@gmail.fr]</strong>
+              Email : <strong>cdz.uhc@gmail.fr</strong>
             </li>
             <li>
-              Directeur de la publication : <strong>[N3wSonic]</strong>
+              Directeur de la publication : <strong>N3wSonic</strong>
             </li>
           </ul>
         </section>
@@ -34,16 +34,16 @@ export default function Mentions_Legales() {
           <h2>Hébergeur du site</h2>
           <ul>
             <li>
-              Nom de l'hébergeur : <strong>[Nom de l'Hébergeur]</strong>
+              Nom de l'hébergeur : <strong>A définir</strong>
             </li>
             <li>
-              Adresse : <strong>[Adresse de l'Hébergeur]</strong>
+              Adresse : <strong>A définir</strong>
             </li>
             <li>
-              Téléphone : <strong>[Numéro de Téléphone de l'Hébergeur]</strong>
+              Téléphone : <strong>A définir</strong>
             </li>
             <li>
-              Site web : <strong>[Site Web de l'Hébergeur]</strong>
+              Site web : <strong>A définir</strong>
             </li>
           </ul>
         </section>
@@ -55,7 +55,7 @@ export default function Mentions_Legales() {
             <strong>images</strong>, <strong>textes</strong>,{" "}
             <strong>logos</strong> et <strong>icônes</strong> ainsi que leur
             mise en forme sont la propriété exclusive de{" "}
-            <strong>[CDZ Company]</strong>, à l'exception des{" "}
+            <strong>Cheavliers du Zodiaque UHC</strong>, à l'exception des{" "}
             <strong>marques</strong>, <strong>logos</strong> ou{" "}
             <strong>contenus</strong> appartenant à{" "}
             <strong>d'autres sociétés partenaires</strong> ou{" "}
@@ -66,7 +66,7 @@ export default function Mentions_Legales() {
         <section>
           <h2>Conditions d'utilisation</h2>
           <p className="ta-center">
-            Ce site <strong>(https://cdz-fullstack.onrender.com)</strong> est
+            Ce site <strong>https://cdz-fullstack.onrender.com</strong> est
             proposé en différents langages web{" "}
             <strong>(HTML5, Javascript, SASS, etc.)</strong> pour un meilleur
             confort d'utilisation et un graphisme plus agréable. Nous vous
@@ -80,7 +80,7 @@ export default function Mentions_Legales() {
         <section>
           <h2>Cookies</h2>
           <p className="ta-center">
-            Le site <strong>[https://cdz-fullstack.onrender.com]</strong>{" "}
+            Le site <strong>https://cdz-fullstack.onrender.com</strong>{" "}
             peut-être amené à vous demander{" "}
             <strong>l&apos;acceptation des cookies</strong> pour des besoins de{" "}
             <strong>statistiques</strong> et <strong>d&apos;affichage</strong>.
@@ -112,16 +112,16 @@ export default function Mentions_Legales() {
               octobre 1995
             </strong>
             . <br /> <br /> Sur le site{" "}
-            <strong>[https://cdz-fullstack.onrender.com]</strong>, le
-            propriétaire du site ne collecte des{" "}
-            <strong>informations personnelles</strong> relatives à l'utilisateur
-            que pour le besoin de <strong>certains services proposés</strong>{" "}
-            par le site <strong>[https://cdz-fullstack.onrender.com]</strong>.
-            L'utilisateur fournit ces informations en{" "}
+            <strong>https://cdz-fullstack.onrender.com</strong>, le propriétaire
+            du site ne collecte des <strong>informations personnelles</strong>{" "}
+            relatives à l'utilisateur que pour le besoin de{" "}
+            <strong>certains services proposés</strong> par le site{" "}
+            <strong>https://cdz-fullstack.onrender.com</strong>. L'utilisateur
+            fournit ces informations en{" "}
             <strong>toute connaissance de cause</strong>, notamment lorsqu'il
             procède par <strong>lui-même</strong> à leur saisie. Il est alors
             précisé à l'utilisateur du site
-            <strong>[https://cdz-fullstack.onrender.com]</strong>{" "}
+            <strong>https://cdz-fullstack.onrender.com</strong>{" "}
             <strong>l&apos;obligation</strong> ou <strong>non</strong> de
             fournir ces informations. <br /> <br /> Conformément aux
             dispositions{" "}
@@ -135,8 +135,8 @@ export default function Mentions_Legales() {
             et <strong>d&apos;opposition</strong> aux{" "}
             <strong>données personnelles le concernant</strong>. Pour
             l&apos;exercer, adressez votre demande à{" "}
-            <strong>[CDZ Company]</strong> par email :{" "}
-            <strong>[cdz.uhc@gmail.com]</strong> ou en effectuant sa demande{" "}
+            <strong>Chevaliers du Zodiaque UHC</strong> par email :{" "}
+            <strong>cdz.uhc@gmail.com</strong> ou en effectuant sa demande{" "}
             <strong>écrite</strong> et <strong>signée</strong>, accompagnée
             <strong>
               {" "}
@@ -145,18 +145,19 @@ export default function Mentions_Legales() {
             en précisant <strong>l&apos;adresse</strong> à laquelle la réponse
             doit être envoyée. <br /> <br />{" "}
             <strong>Aucune information personnelle</strong> de l'utilisateur du
-            site <strong>[https://cdz-fullstack.onrender.com]</strong> n'est{" "}
+            site <strong>https://cdz-fullstack.onrender.com</strong> n'est{" "}
             <strong>publiée</strong> à l'insu de l'utilisateur,{" "}
             <strong>échangée</strong>, <strong>transférée</strong>,{" "}
             <strong>cédée</strong> ou <strong>vendue</strong> sur un support
             quelconque à des tiers. Seule l'hypothèse du <strong>rachat</strong>{" "}
-            de <strong>[CDZ Company]</strong> et de <strong>ses droits</strong>{" "}
-            permettrait la <strong>transmission</strong> des dites informations
-            à l'éventuel acquéreur qui serait à son tour tenu de{" "}
+            de <strong>Chevaliers du Zodiaque UHC</strong> et de{" "}
+            <strong>ses droits</strong> permettrait la{" "}
+            <strong>transmission</strong> des dites informations à l'éventuel
+            acquéreur qui serait à son tour tenu de{" "}
             <strong>la même obligation de conservation</strong> et{" "}
             <strong>de modification des données</strong> vis-à-vis de
             l'utilisateur du site{" "}
-            <strong>[https://cdz-fullstack.onrender.com]</strong>. <br /> <br />{" "}
+            <strong>https://cdz-fullstack.onrender.com</strong>. <br /> <br />{" "}
             Les <strong>bases de données</strong> sont{" "}
             <strong>protégées</strong> par les dispositions de{" "}
             <strong>
@@ -170,14 +171,15 @@ export default function Mentions_Legales() {
         <section>
           <h2>Liens hypertextes et cookies</h2>
           <p className="ta-center">
-            Le site <strong>[https://cdz-fullstack.onrender.com]</strong>{" "}
-            contient un certain nombre de <strong>liens hypertextes</strong>{" "}
-            vers <strong>d&apos;autres sites</strong>{" "}
+            Le site <strong>https://cdz-fullstack.onrender.com</strong> contient
+            un certain nombre de <strong>liens hypertextes</strong> vers{" "}
+            <strong>d&apos;autres sites</strong>{" "}
             <strong>(partenaires, informations, etc.)</strong> mis en place avec
-            l&apos;autorisation de <strong>[CDZ Company]</strong>. <br />{" "}
-            Cependant, <strong>[CDZ Company]</strong> n&apos;a pas la
-            possibilité de <strong>vérifier</strong> le contenu des sites ainsi{" "}
-            <strong>visités</strong> et <strong>décline</strong> donc toute
+            l&apos;autorisation de <strong>Chevaliers du Zodiaque UHC</strong>.{" "}
+            <br /> Cependant, <strong>Cheavliers du Zodiaque UHC</strong>{" "}
+            n&apos;a pas la possibilité de <strong>vérifier</strong> le contenu
+            des sites ainsi <strong>visités</strong> et <strong>décline</strong>{" "}
+            donc toute
             <strong>responsabilité</strong> de ce fait quand aux{" "}
             <strong>risques éventuels</strong> de{" "}
             <strong>contenus illicites</strong>. <br /> <br />{" "}

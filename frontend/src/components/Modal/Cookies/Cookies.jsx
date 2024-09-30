@@ -1,6 +1,7 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
 import styles from "./Cookies.module.scss";
+import { Link } from "react-router-dom";
 
 const CookieBanner = () => (
   <CookieConsent
@@ -27,8 +28,8 @@ const CookieBanner = () => (
     expires={150}
   >
     Ce site utilise des cookies pour améliorer votre expérience.{" "}
-    <a
-      href="/rgpd"
+    <Link
+      to="/mentions_legales"
       style={{
         color: "#fff",
         textDecoration: "underline",
@@ -36,7 +37,7 @@ const CookieBanner = () => (
       }}
     >
       En savoir plus
-    </a>
+    </Link>
   </CookieConsent>
 );
 

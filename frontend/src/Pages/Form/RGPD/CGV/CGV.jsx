@@ -21,7 +21,7 @@ export default function CGV() {
       </p>
       <h2>Article 2 : Identité de l’entreprise</h2>
       <p>
-        Nom de l'entreprise : <strong>A définir</strong> <br />
+        Nom de l'entreprise : <strong>Chevaliers du Zodiaque UHC</strong> <br />
         Siège social : <strong>A définir</strong> <br />
         Numéro d'enregistrement : <strong>A définir</strong> <br />
         Email : <strong>cdz.uhc@gmail.com</strong>
