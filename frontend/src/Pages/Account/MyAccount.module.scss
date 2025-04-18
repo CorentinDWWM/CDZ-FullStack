@@ -45,7 +45,7 @@
   background-color: var(--primary);
   color: white;
   padding: 10px 50px;
-  height: 500px;
+  min-height: 500px;
   margin-top: 50px;
   margin-bottom: 50px;
 
@@ -61,6 +61,8 @@
 
 .categories {
   font-size: 28px;
+  width: 200px;
+  text-align: center;
 
   @include mixin.sm-lt {
     font-size: 20px;
@@ -75,11 +77,16 @@
 .trait {
   margin-left: 50px;
   margin-right: 50px;
-  height: 60px;
+  height: 100px;
   width: 2px;
   background-color: black;
 
   @include mixin.sm-lt {
     display: none;
   }
+}
+
+.textAchat {
+  width: 200px;
+  text-align: center;
 }

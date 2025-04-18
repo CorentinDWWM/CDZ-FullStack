@@ -23,6 +23,24 @@ export default function Accueil() {
     getAllVideos();
   }, []);
 
+  useEffect(() => {
+    async function syncPurchases() {
+      try {
+        const response = await fetch(`${url}/achats/syncPurchases`);
+        if (response.ok) {
+          await response.json();
+          console.log("Achats synchronisés");
+        }
+      } catch (error) {
+        console.error("Erreur de sync :", error);
+      }
+    }
+    // fetch("/api/achats/syncPurchases")
+    //   .then((res) => res.json() && console.log("Achats synchronisés"))
+    //   .catch((err) => console.error("Erreur de sync :", err));
+    syncPurchases();
+  }, []);
+
   return (
     <>
       <section
@@ -79,7 +97,7 @@ export default function Accueil() {
         </p>
         <div className="d-flex flex-column mt-50">
           {videos.map((video) => (
-            <>
+            <div key={video.id}>
               <iframe
                 className={`${styles.videos}`}
                 src={`https://www.youtube.com/embed/${video.id_video}?autoplay=0`}
@@ -93,7 +111,7 @@ export default function Accueil() {
                 Vidéo par <strong>{video.createur}</strong>
               </p>
               <hr className={`${styles.separation_video}`} />
-            </>
+            </div>
           ))}
         </div>
       </section>

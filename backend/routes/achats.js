@@ -5,15 +5,14 @@ const {
   updateAchat,
   deleteAchat,
   createAchat,
+  syncPurchases,
 } = require("../controllers/achat-controller");
 
 // api/achats
 
-// CRUD admin
-
 router.get("/", getAchats);
-
-router.get("/:email", getOneAchat);
+router.get("/syncPurchases", syncPurchases);
+router.get("/:id", getOneAchat);
 router.put("/:id", updateAchat);
 router.delete("/:id", deleteAchat);
 router.post("/", createAchat);

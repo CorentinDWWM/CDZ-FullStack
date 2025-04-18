@@ -10,7 +10,6 @@ const {
   updateUser,
   deleteUser,
   createUser,
-  getLoggedInUserId,
 } = require("../controllers/user-controller");
 
 // l'url correspond à localhost:5000/api/users

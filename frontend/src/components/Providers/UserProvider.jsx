@@ -8,6 +8,17 @@ export default function UserProvider({ children }) {
   const [user, setUser] = useState(userConnected);
   const [purchases, setPurchases] = useState([]);
 
+  // useEffect(() => {
+  //   async function getUserPurchase() {
+  //     try {
+  //       const response = await fetch
+  //     } catch (error) {
+  //       console.error("Achats introuvable", error);
+
+  //     }
+  //   }
+  // })
+
   useEffect(() => {
     const userStorage = JSON.parse(localStorage.getItem("user"));
     if (userStorage) {

@@ -2,10 +2,12 @@ const mongoose = require("mongoose");
 
 const achatSchema = new mongoose.Schema({
   stripeId: { type: String, required: true, unique: true },
-  amount: { type: Number, required: true },
+  email: { type: String, required: true },
+  name: { type: String, required: true },
+  price: { type: Number, required: true },
   currency: { type: String, required: true },
   status: { type: String, required: true },
-  created: { type: Date, required: true },
+  date: { type: String, required: true },
 });
 
 achatSchema.set("toJSON", {
