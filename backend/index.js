@@ -9,8 +9,8 @@ const videoRoutes = require("./routes/videos");
 const achatRoutes = require("./routes/achats");
 const userAchatRoutes = require("./routes/userAchats");
 const cors = require("cors");
-const allowedOrigin = "*";
-// const allowedOrigin = "https://cdz-fullstack.onrender.com";
+// const allowedOrigin = "*";
+const allowedOrigin = "https://cdz-fullstack.onrender.com";
 const path = require("path");
 const __DIRNAME = path.resolve();
 
