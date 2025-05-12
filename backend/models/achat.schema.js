@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const achatSchema = new mongoose.Schema({
-  stripeId: { type: String, required: true, unique: true },
+  stripeId: { type: String, required: true },
   email: { type: String, required: true },
   name: { type: String, required: true },
   price: { type: Number, required: true },
