@@ -139,7 +139,7 @@ export default function Register() {
           <label htmlFor="rgpd" className={`mb-10 ${styles.rgpd}`}>
             <input {...register("rgpd")} type="checkbox" id="rgpd" />
             <p>
-              J'autorice ce site à conserver mes données personnelles transmises
+              J'autorise ce site à conserver mes données personnelles transmises
               via ce formulaire. Aucune exploitation commerciale ne sera faite
               des données conservées. Voir notre{" "}
               <NavLink to="/rgpd">
